@@ -1,0 +1,811 @@
+body {
+    background-color: rgba(255, 255, 255, 0);
+
+    /* A temporary background colour */
+    background-color: rgba(98, 223, 140, 1.0);
+
+}
+
+/* Dimensions
+
+    Designer's Canvas SIZE {W, H} : 1000 x 1310
+
+    Visual (White) Paddings till Brorders { L = 45px, R = 46 }
+    ??? 1 px is the difference between them
+
+    DistanceL (RightBorderEdge, Right Shadowed Zone) = 2px
+    DistanceR (RightBorderEdge, Right Shadowed Zone) = 7px
+
+    Working WIDTH: 918px = 1000 - (43 + 39)
+*/
+
+
+.wrapper_core {
+    width: 918px;
+/*    height: 1310px;*/
+
+    /* Left, Right gaps between outer edge
+        and border or shadow (other effects) edges
+    */
+    padding-left: 43px;
+    padding-right: 39px;
+
+    margin: 0 auto;
+
+
+    background-color: rgba(255,255, 255, 1.0);
+
+}
+
+/* This is the core Header Container holding { Login, BG, core horMenu } in it.
+    W: 918 = 1000 - (43 + 39)
+    H: 314
+*/
+.header_space {
+    width: 908px;
+    width: 912px;
+
+    height: 314px;
+
+    margin: 17px 7px 0 3px;
+    /* 20161129 : L/3->1 => we have to add corresponding marginLeft for headers { one, Logo, Menu }*/
+    margin: 17px 7px 0 1px;
+    margin: 17px 7px 0 0px;
+
+    /* A temporary background colour */
+    background-color: rgba(98, 223, 240, 0.93);
+
+}
+
+/* It contains 'Phone Contact info', 'Login/Reg form', 'Navigation Tab' */
+/* 908 = 918 - hor_margin('header_space')*/
+.header_one {
+    width: 908px;
+    height: 37px;
+
+    /* 20161129: the marL of 3px is added after marL@Header-space is decreased at 3px */
+    margin-left: 3px;
+
+    /* Mark-Up, TEST */
+/*    background-color: lime;*/
+}
+
+/* Contact Info container
+
+    ==> There is the BG-Icon in the left padding area
+    ==> An icon of a Doc
+*/
+.contact_info {
+    float: left;
+
+
+    height: 22px;
+    padding-left: 26px;
+
+    margin-left: 6px;
+    margin-top: 5px;
+
+    margin-bottom: 10px;
+
+    /* Mark-Up, TEST */
+/*    background-color: orange;*/
+
+/*    background-image: url("../img/hdr-contact-bg-test.svg");    */
+
+/* This excerpt of CSS-code is going to be used further in the '::before section' */
+/* There should be an icon with White Tube on Circle filled with gradient */
+/*    background-image: url("../img/hdr-contact-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 22px 22px;*/
+}
+
+.phone_info {
+    float: left;
+
+    color: rgba(98, 104, 108, 1.0);
+
+    font: 18px Arial;
+    line-height: 22px;
+
+    /* Das ist gut ! Se la magie ! */
+    letter-spacing: 0.018em;
+}
+
+.phone_info:first-child {
+    position: relative;
+}
+
+.phone_info:first-child::before {
+    content: '';
+
+/*    margin-left: -22px;*/
+    left: -22px;
+    left: -26px;
+    position: absolute;
+/*    display: block;*/
+/*    float: left;*/
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    /* There should be an icon with White Tube on Circle filled with gradient */
+    background-image:
+        url("../img/hdr-contact-bg.svg"),
+        linear-gradient(
+            0deg,
+            rgba(70, 124, 150, 1.0),
+            rgba(25, 87, 120, 1.0) 30%,
+            rgba(20, 76, 111, 1.0) 50%,
+            rgba(15, 60, 96, 1.0) 70%,
+            rgba(13, 54, 91, 1.0) 100%
+        );
+        background-repeat: no-repeat, no-repeat;
+        background-size: 16px 16px, 22px 22px;
+        background-position: center, 0 0;
+}
+
+.phone_info:nth-child(2) {
+    margin-left: 8px;
+}
+
+
+/* Login form : Log In, Create User, Restor User Creds
+
+    ==> There is the BG-Icon in the left padding area
+    => An icon of a Man
+*/
+/*
+    DIMs : Total Heigth = 27px
+    Top/Bottom Borders { 1 + 1 = 2px}, Padding { T/3, B/4 }
+    Content = 18px = 27 - 2 - (3 + 4)
+
+    Width = 496-24/PL = 472
+*/
+#user_login {
+    float: left;
+    width: 472px;
+    height: 18px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    padding-left: 24px;
+
+
+    margin-left: 16px;
+
+    /* I see the VISUAL TOP & BOTTOM borders in Photoshop. But those borders are NOT STROKED by Photoshop !!!! */
+/*    border: 1px solid rgba(179, 195, 207, 1.0);*/
+    border-top: 1px solid rgba(179, 195, 207, 1.0);
+    border-bottom: 1px solid rgba(179, 195, 207, 1.0);
+
+    border-radius: 3px;
+
+    /* Mark-Up, Test */
+    background-color: rgba(245, 244, 141, 0.85);
+    background-image: url("../img/icon-avatar-login.svg"),
+        linear-gradient(
+            0deg,
+            rgba(70, 124, 150, 1.0),
+            rgba(25, 87, 120, 1.0) 30%,
+            rgba(20, 76, 111, 1.0) 50%,
+            rgba(15, 60, 96, 1.0) 70%,
+            rgba(13, 54, 91, 1.0) 100%
+        );
+    background-repeat: no-repeat, no-repeat;
+    background-size: 15px 19px, auto auto;
+    /*background-position: center, 0 0;*/
+/*    background-position: center, 0 0;    */
+/*    background-position: 7px 4px;*/
+    background-position: 6px 4px, 0 0;
+}
+
+/* Full Login-button DIMs : 115 x 18
+    { Border: 1+1; LeftPad: 4;
+        Content: W = 109 = (115 - 1*2 - 4)
+                H = 16 = (18 - 2)
+    }
+*/
+input[name="user_name"],
+input[name="user_password"]
+{
+    float: left;
+    width: 109px;
+    height: 16px;
+
+    padding: 0;
+    padding-left: 4px;
+
+    border: 1px solid rgba(155, 159, 161, 1.0);
+    border-radius: 1px;
+
+    /* Mark-Up, Test */
+/*    background-color: yellow;*/
+
+    color: rgba(153, 161, 164, 1.0);
+/*    box-shadow: inset 2px 2px 4px green;*/
+
+    font: 11px "Lucida Sans Unicode", sans-serif;
+    line-height: 16px;
+}
+
+input[name="user_password"] {
+    margin-left: 6px;
+    padding-left: 5px;
+    padding-left: 4px;
+}
+
+/* There no borders, so Hight is longer ! */
+input[name="submit_in"]
+ {
+    float: left;
+    height: 18px;
+    padding-top: 0;
+    padding-top: 1px;
+
+    padding-right: 4px;
+    padding-right: 3px;
+
+    padding-left: 3px;
+    padding-left: 5px;
+
+    padding-left: 4px;
+
+    border-style: none;
+
+    margin-left: 4px;
+    margin-left: 3px;
+
+    background-color: transparent;
+
+    color: rgba(255, 255, 255, 1.0);
+
+    font: 11px "Lucida Sans Unicode", sans-serif;
+    line-height: 18px;
+}
+
+/* The vertical Char-based bar is used a separator between 2 buttons */
+.vert_char_bar {
+    float: left;
+    height: 18px;
+
+/*    margin-left: 5px;*/
+
+/*    margin-left: -2px;*/
+
+    background-color: transparent;
+
+    color: rgba(255, 255, 255, 1.0);
+
+    font: 11px "Lucida Sans Unicode", sans-serif;
+    line-height: 18px;
+}
+
+input[name="submit_reg"]
+ {
+    float: left;
+    height: 18px;
+    padding: 0 4px;
+    padding-top: 1px;
+    padding-left: 0;
+    padding-left: 2px;
+
+    border-style: none;
+
+/*    margin-left: 4px;*/
+
+    background-color: transparent;
+
+    color: rgba(255, 255, 255, 1.0);
+
+    font: 11px "Lucida Sans Unicode", sans-serif;
+    line-height: 18px;
+/*    letter-spacing: inherit;*/
+}
+
+input[name="submit_restore"] {
+    float: left;
+    height: 18px;
+    padding: 0 4px;
+
+    padding-top: 1px;
+/*    padding-left: 0;*/
+
+    border-style: none;
+
+    margin-left: 12px;
+
+    background-color: transparent;
+    color: rgba(190, 190, 190, 1.0);
+
+    font: 11px "Lucida Sans Unicode", sans-serif;
+    line-height: 18px;
+
+    letter-spacing: 0.04em;
+    text-decoration: underline;
+}
+
+/* Compact Navi Region
+    DIMs : 77 x 21
+        Border: 2 = 1 + 1
+        Pads : T/2, B/6 => 8Vert
+            L/9, R/12
+        Content: H/11 = 21 - (2 * 1) - (2/T + 6/B)
+                W/54 = 77 - (2 * 1) - (9 + 12)
+*/
+.navi_site {
+    float: left;
+    width: 54px;
+    height: 11px;
+/*    padding: 2px 12px 6px 9px;*/
+    padding-top: 2px;
+    padding-right: 12px;
+    padding-bottom: 6px;
+    padding-left: 9px;
+
+    border-radius: 8px;
+    border: 1px solid rgba(212, 215, 217, 1.0);
+
+    margin-top: 2px;
+    margin-left: 17px;
+
+    background-color: white;
+}
+
+.navi_home {
+    float: left;
+    width: 11px;
+    height: 11px;
+
+    background-image: url("../img/icon-home-my-01-02.svg");
+    background-size: 11px;
+    background-repeat: no-repeat;
+}
+
+.navi_sitetree {
+    float: left;
+    width: 14px;
+    height: 11px;
+
+    margin-left: 8px;
+
+    background-image: url("../img/icon-sitetree-my-01-01.svg");
+    background-size: 14px 11px;
+    background-repeat: no-repeat;
+}
+
+.navi_email {
+    float: left;
+    width: 12px;
+    height: 11px;
+
+    margin-left: 9px;
+
+    background-image: url("../img/icon-mail-my-01-01.svg");
+    background-size: 12px 11px;
+    background-repeat: no-repeat;
+}
+
+/* Header 02, the Logo and Backgrounds
+    Dims : 908 x 237
+*/
+.header_logo {
+    overflow: hidden;
+
+    width: 908px;
+    height: 237px;
+
+    margin-left: 3px;
+
+    background-image:
+        url(../img/bg-tyre-sample.png),
+        radial-gradient(
+            /* L307 X 607 Y 237 */
+            circle 337px at 607px 197px,
+            rgba(0, 188, 212, 1.0) 190px,
+            /* 280 px */
+            rgba(192, 173, 207, 0.12) 290px,
+            rgba(255, 255, 255, 0.0)),
+        linear-gradient(
+            90deg,
+            rgba(12, 21, 35, 1.0),
+            rgba(15, 27, 45, 1.0) 35px,
+            rgba(20, 34, 58, 1.0) 93px,
+            rgba(27, 45, 73, 1.0) 246px,
+            rgba(30, 48, 77, 1.0) 293px,
+            rgba(34, 54, 87, 1.0) 387px,
+            rgba(38, 60, 81, 1.0) 844px,
+            rgba(14, 24, 35, 1.0) 908px
+        );
+    background-position: right top, right, right;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+}
+/*
+.header_logo::after {
+    display: block;
+    content: '';
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}*/
+
+
+/* A help to cover the floated areas of the document */
+.clearfix::after {
+    display: block;
+    content: '';
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+
+.slogan_space {
+    float: left;
+
+    width: 267px;
+    height: 121px;
+
+    margin-top: 50px;
+
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+
+
+.slogan_one {
+    margin-top: 51px;
+
+    color: rgba(203, 203, 203, 1.0);
+
+    font: 34px/56px "Microsoft Sans Serif", sans-serif;
+    line-height: 36px;
+
+    text-indent: 5px;
+}
+
+.slogancore {
+    font-size: 56px;
+}
+
+.sloganpoint {
+    font-size: 43px;
+}
+
+.slogan_two {
+    color: rgba(145, 28, 7, 1.0);
+
+    font: 27px/27px Arial, sans-serif;
+    line-height: 21px;
+
+    text-indent: 70px;
+}
+
+/* An Menu Item DIMs :
+    Width : 910 - padL/125 = 785
+    Height : 34 - 2 * 1px/brd - 2 * 3px/Pad == 26
+    Border-width : 1px
+
+    Item 1 { padL : 21px, padR: 19px ==> pad == 40px }
+
+*/
+
+/* A menu's Item in hiver-state */
+
+.header_menu {
+    width: 785px;
+    height: 26px;
+
+    padding-left: 125px;
+    padding-left: 128px;
+
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+/*    border: 1px solid rgba(23, 28, 67, 1.0);*/
+    border: 1px solid transparent;
+
+    border-radius: 5px;
+
+    margin-left: 1px;
+    margin-top: 6px;
+
+    background-image: linear-gradient(
+        rgba(90, 96, 103, 1.0),
+        rgba(137, 143, 150, 1.0) 4%,
+        rgba(47, 49, 51, 1.0) 24%,
+        rgba(0, 0, 0, 1.0));
+
+    text-align: center;
+}
+
+.core_menu {
+    float: left;
+
+}
+
+.core_menu li {
+    float: left;
+
+    height: 26px;
+
+    color: rgba(179, 186, 190, 1.0);
+
+    font: 13.64px/27px "Lucida Sans Unicode", sans-serif;
+}
+
+.core_menu li:hover {
+    border-radius: 12px;
+
+    background-image: linear-gradient(rgba(0, 188, 212, 1.0), rgba(6, 91, 152, 1.0));
+
+    color: rgba(255, 255, 255, 1.0);
+}
+
+.core_menu li:first-child {
+    width: 123px;
+}
+
+.core_menu li:nth-child(2) {
+    width: 86px;
+    margin-left: 1px;
+}
+
+/* 103 = 14 + 74 + 15  */
+.core_menu li:nth-child(3) {
+    width: 103px;
+    margin-left: 2px;
+}
+
+/* 81 = 15 + 53 + 13 */
+.core_menu li:nth-child(4) {
+    width: 81px;
+    margin-left: 2px;
+}
+
+/* 102 = 13 + 74 + 15 */
+.core_menu li:nth-child(5) {
+    width: 99px;
+}
+
+
+.user_basket_info {
+    float: left;
+    width: 196px;
+
+    height: 26px;
+    padding-left: 30px;
+
+    margin-left: 57px;
+
+    background-image: url("../img/icon-basket.svg");
+    background-size: 21px 18px;
+    background-position: 0 4px;
+    background-repeat: no-repeat;
+
+    color: rgba(147, 154, 157, 1.0);
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+
+    line-height: 25px;
+
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+.basket_qnty,
+.basket_sum {
+    color: rgba(53, 90, 140, 1.0);
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+
+    vertical-align: middle;
+}
+
+.basket_qnty {
+    padding-left: 1px;
+    padding-right: 10px;
+}
+
+.basket_sum {
+    padding-left: 9px;
+}
+
+/* The Multi-Search Panel
+    An element substitute in the form of BG-image
+        Dims: 901 x 136
+        Margin T, L { 6, 11 }
+*/
+.search_panel {
+    width: 901px;
+    height: 136px;
+
+    margin-top: 11px;
+    margin-left: 6px;
+    margin-bottom: 13px;
+
+    background-color: pink;
+    background-image: url("../img/bg-search-panel-specimen.png");
+}
+
+/* Center SPACE where Vertical Sidebars and Core content reside
+
+*/
+
+/*
+.center-space-zoo::after {
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+*/
+
+/* ASIDE Dims: 190 x 630 */
+.shop_catalogue {
+    float: left;
+    width: 190px;
+
+    padding-top: 5px;
+
+    margin-left: 1px;
+
+    background-color: pink;
+}
+
+.catalogue {
+
+    /* Mark-Up, test */
+    background-color: rgba(134, 175, 171, 1.0);
+    background-color: cyan;
+}
+
+/*
+    Total DIMs { 183 x 27 },
+        i.e. Width : 183 - 2 * 1px - 30/padL = 151 , Height : 25
+        Border : 2 * 1px = 2
+
+*/
+.nav_name {
+    position: relative;
+    display: block;
+
+    width: 151px;
+    height: 25px;
+    padding-left: 30px;
+    padding-left: 28px;
+
+    border: 1px solid rgba(124, 134, 139, 1.0);
+    border-radius: 14px;
+
+    background-color: rgba(106, 235, 103, 0.66);
+    color: rgba(42, 67, 100, 1.0);
+
+    font: 12.73px/25px "Lucida Sans Unicode", sans-serif;
+    font: 12.73px/26px "Lucida Sans Unicode", sans-serif;
+
+    /* It (i.e. text-indent) is used now in place of Left-padding
+    which should be considered to set the proper Width value otherwise ! */
+/*    text-indent: 30px;*/
+}
+
+.nav_name::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    top: 1px;
+    left: 3px;
+    left: 2px;
+
+    width: 22px;
+    height: 21px;
+
+    border-radius: 50%;
+
+    background-image:
+        url("../img/icon-doc-my-01-02.svg"),
+        linear-gradient(
+            0deg,
+            rgba(70, 124, 150, 1.0),
+            rgba(25, 87, 120, 1.0) 30%,
+            rgba(20, 76, 111, 1.0) 50%,
+            rgba(15, 60, 96, 1.0) 70%,
+            rgba(13, 54, 91, 1.0) 100%
+        );
+    background-repeat: no-repeat, no-repeat;
+    background-size: 12px 14px, 22px 21px;
+    background-position: center, 0 0;
+}
+
+.catalogue section:nth-child(2) {
+    margin-top: 13px;
+}
+
+
+/*
+    Total DIMs { 150 x 28 },
+        i.e. Width : 150 - 2 * 1px - 30/padL = 118 , Height : 26
+        Border : 2 * 1px = 2
+
+*/
+.catalogue .item_category {
+    margin-left: 2px;
+}
+
+.item_category {
+    position: relative;
+/*    display: block;*/
+
+    width: 118px;
+    height: 26px;
+    padding-left: 30px;
+    padding-left: 28px;
+    padding-left: 30px;
+    padding-left: 29px;
+
+    border: 1px solid rgba(124, 134, 139, 1.0);
+    border-radius: 13px;
+
+    background-color: rgba(106, 235, 103, 0.66);
+    color: rgba(42, 67, 100, 1.0);
+
+    font: 14px/25px "Lucida Sans Unicode", sans-serif;
+    font: 14px/26px "Lucida Sans Unicode", sans-serif;
+    font: 14px/30px "Lucida Sans Unicode", sans-serif;
+}
+
+.item_category::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 4px;
+/*    left: 2px;*/
+
+    width: 10px;
+    width: 11px;
+    height: 10px;
+    height: 11px;
+
+    border-radius: 50%;
+    border: 6px solid rgba(42, 67, 100, 1.0);
+}
+
+.item_list li {
+    position: relative;
+    padding-left: 12px;
+
+    list-style: none;
+    list-style-position: inside;
+    color: rgba(77, 89, 97, 1.0);
+
+    font: 12.73px/25.46px "Lucida Sans Unicode", sans-serif;
+}
+
+/* The circle-like marker will be made of a Rounded Border of the needed colour
+    Circle-Marker Dims : Total 8 x 8
+        borderWidth : 3
+        borderRadius : 3
+        Content W = 2 = 8 - 2 * 3px, H = 2 = 8 - 2 * 3px
+*/
+
+.item_list li::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    
+
+    width: 2px;
+    height: 2px;
+
+    border: 2px solid orange;
+    border-radius: 4px;
+}
+
+.main_content {
+    float: left;
+}
+
+.brand_lists {
+    float: left;
+}

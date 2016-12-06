@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The GoIT FE Hometask 06</title>
+    <link rel="stylesheet" href="css/reset-em.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper_core">
+        <header class="header_space">
+            <!-- Here is the core Header Container -->
+            <div class="header_one">
+                <!-- Phone Contact Info -->
+                <div class="contact_info">
+                    <span class="phone_info">(044)123-45-67</span>
+                    <span class="phone_info">(044)567-89-10</span>
+                </div> <!-- eo 'Contact Info' -->
+
+                <!-- Login form (Log In, UserRegistration, Restore userCreds) -->
+                <form action="#" method="post" id="user_login">
+                    <input type="text" name="user_name" placeholder="логин">
+                    <input type="password" name="user_password" placeholder="пароль">
+                    <input type="submit" name="submit_in" value="вход">
+                    <span class="vert_char_bar">|</span>
+                    <input type="submit" name="submit_reg" value="регистрация">
+                    <input type="submit" name="submit_restore" value="забыли пароль ?">
+                </form> <!-- eo 'Login' form -->
+
+                <div class="navi_site">
+                    <a href="#" title="Переход на главную страницу web-сайта" class="navi_home"></a>
+                    <a href="#"  title="Просмотреть структуру web-сайта" class="navi_sitetree"></a>
+                    <a href="#"  title="Отправить почтовое сообщение" class="navi_email"></a>
+                </div>
+            </div> <!-- eo 'Header 1' -->
+
+            <div class="header_logo">
+                <div class="slogan_space">
+                    <div class="slogan_one"><span class="slogancore">zazor</span><span class="sloganpoint">.</span>com<span class="sloganpoint">.</span>ua</div>
+                    <div class="slogan_two">drives you away</div>
+                </div>
+            </div>
+
+            <nav class="header_menu">
+                <div class="core_menu">
+                    <ul>
+                        <!-- О КОМПАНИ is in place of О КОМПАНИИ -->
+                        <li>О КОМПАНИ</li>
+                        <li>ОПЛАТА</li>
+                        <li>ДОСТАВКА</li>
+                        <li>СТАТЬИ</li>
+                        <li>КОНТАКТЫ</li>
+                    </ul>
+                </div>    <!--eo  the Horizontal Menu -->
+
+                <!-- User basket info -->
+                <div class="user_basket_info">
+                    <!-- By pressing on basket, We can find out the User's order info -->
+                    товаров:<span class="basket_qnty">0</span>
+                    на сумму:<span class="basket_sum">0,00 <span>грн</span></span>
+
+                </div>
+            </nav>    <!-- eo 'User Basket Info' -->
+        </header> <!-- eo 'eo header_core' -->
+
+        <!-- Core e-Shop's Search panel by categories like Car, tyre, Disks -->
+        <aside class="search_panel">
+
+        </aside>
+
+        <!-- Center SPACE where Vertical Sidebars and Core content reside ... -->
+        <div class="center-space clearfix">
+            <!-- Left Panel, the Catalogue ... -->
+            <aside class="shop_catalogue">
+                <!-- eo 'Catalogue navigation' -->
+                <nav class="catalogue">
+                    <span class="nav_name">КАТАЛОГ ПРОДУКЦИИ:</span>
+                    <section>
+                        <h2 class="item_category">ШИНЫ</h2>
+                        <ul class="item_list">
+                            <li><a href="#">Наименование 1</a></li>
+                            <li><a href="#">Наименование 2</a></li>
+                            <li><a href="#">Наименование 3</a></li>
+                            <li><a href="#">Наименование 4</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2 class="item_category">ДИСКИ</h2>
+                        <ul class="item_list">
+                            <li><a href="#">Наименование 1</a></li>
+                            <li><a href="#">Наименование 2</a></li>
+                            <li><a href="#">Наименование 3</a></li>
+                            <li><a href="#">Наименование 4</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2 class="item_category">БОЛТЫ</h2>
+                        <ul class="item_list">
+                            <li><a href="#">Наименование 1</a></li>
+                            <li><a href="#">Наименование 2</a></li>
+                            <li><a href="#">Наименование 3</a></li>
+                            <li><a href="#">Наименование 4</a></li>
+                        </ul>
+                    </section>
+                </nav> <!-- eo 'Catalogue navigation' -->
+            </aside>
+
+            <main class="main_content">
+                <!--
+                    <ul></ul>
+                -->
+                <div class="item_descr">
+                    <figure>
+                        <figcaption>
+                            <h3>Goodyear</h3>
+                            <p>Ultra Grip Extreme</p>
+                        </figcaption>
+                        <div class="img_container">
+                            <img src="img/item_fig-01.jpeg" alt="Изображение интересуемой позиции товара">
+                        </div>
+                        <p class="item_price">90.00<span>грн</span></p>
+                    </figure>
+                </div> <!-- an Item's description -->
+
+                <div class="item_descr">
+                    <figure>
+                        <figcaption>
+                            <h3>Nokian</h3>
+                            <p>Hakkapeliitta R</p>
+                        </figcaption>
+                        <div class="img_container">
+                            <img src="img/item_fig-02.jpeg" alt="Изображение интересуемой позиции товара">
+                        </div>
+                        <p class="item_price">115.00<span>грн</span></p>
+                    </figure>
+                </div> <!-- an Item's description -->
+
+                <div class="item_descr">
+                    <figure>
+                        <figcaption>
+                            <h3>Hankook</h3>
+                            <p>K 708 155/65 R14</p>
+                        </figcaption>
+                        <div class="img_container">
+                            <img src="img/item_fig-03.jpeg" alt="Изображение интересуемой позиции товара">
+                        </div>
+                        <p class="item_price">393.00<span>грн</span></p>
+                    </figure>
+                </div> <!-- an Item's description -->
+
+                <div class="item_descr">
+                    <figure>
+                        <figcaption>
+                            <h3>Goodyear</h3>
+                            <p>Ultra Grip Extreme</p>
+                        </figcaption>
+                        <div class="img_container">
+                            <img src="img/item_fig-01.jpeg" alt="Изображение интересуемой позиции товара">
+                        </div>
+                        <p class="item_price">90.00<span>грн</span></p>
+                    </figure>
+                </div> <!-- an Item's description -->
+
+                <div class="item_descr">
+                    <figure>
+                        <figcaption>
+                            <h3>Nokian</h3>
+                            <p>Hakkapeliitta R</p>
+                        </figcaption>
+                        <div class="img_container">
+                            <img src="img/item_fig-02.jpeg" alt="Изображение интересуемой позиции товара">
+                        </div>
+                        <p class="item_price">115.00<span>грн</span></p>
+                    </figure>
+                </div> <!-- an Item's description -->
+
+                <div class="item_descr">
+                    <figure>
+                        <figcaption>
+                            <h3>Hankook</h3>
+                            <p>K 708 155/65 R14</p>
+                        </figcaption>
+                        <div class="img_container">
+                            <img src="img/item_fig-03.jpeg" alt="Изображение интересуемой позиции товара">
+                        </div>
+                        <p class="item_price">393.00<span>грн</span></p>
+                    </figure>
+                </div> <!-- an Item's description -->
+
+
+                <div class="item_descr">
+                    <figure>
+                        <figcaption>
+                            <h3>Goodyear</h3>
+                            <p>Ultra Grip Extreme</p>
+                        </figcaption>
+                        <div class="img_container">
+                            <img src="img/item_fig-01.jpeg" alt="Изображение интересуемой позиции товара">
+                        </div>
+                        <p class="item_price">90.00<span>грн</span></p>
+                    </figure>
+                </div> <!-- an Item's description -->
+
+                <div class="item_descr">
+                    <figure>
+                        <figcaption>
+                            <h3>Nokian</h3>
+                            <p>Hakkapeliitta R</p>
+                        </figcaption>
+                        <div class="img_container">
+                            <img src="img/item_fig-02.jpeg" alt="Изображение интересуемой позиции товара">
+                        </div>
+                        <p class="item_price">115.00<span>грн</span></p>
+                    </figure>
+                </div> <!-- an Item's description -->
+
+                <div class="item_descr">
+                    <figure>
+                        <figcaption>
+                            <h3>Hankook</h3>
+                            <p>K 708 155/65 R14</p>
+                        </figcaption>
+                        <div class="img_container">
+                            <img src="img/item_fig-03.jpeg" alt="Изображение интересуемой позиции товара">
+                        </div>
+                        <p class="item_price">393.00<span>грн</span></p>
+                    </figure>
+                </div> <!-- an Item's description -->
+
+            </main>    <!-- eo 'Main Content' -->
+
+            <aside class="brand_lists">
+                <form action="#" method="post" class="form-brand_selection">
+                    <fieldset>
+                        <legend>БРЕНДЫ</legend>
+                        <dl>
+                            <dt>ШИНЫ</dt>
+                            <dd>
+                                <input type="checkbox" name="tyre-brand_name" value="tyre-brand-01" id="tyre-brand_name-1">
+                                <label for="tyre-brand_name-1">Бренд 1</label>
+                            </dd>
+                            <dd>
+                                <input type="checkbox" name="tyre-brand_name" value="tyre-brand-02" id="tyre-brand_name-2">
+                                <label for="tyre-brand_name-2">Бренд 2</label>
+                            </dd>
+                            <dd>
+                                <input type="checkbox" name="tyre-brand_name" value="tyre-brand-03" id="tyre-brand_name-3">
+                                <label for="tyre-brand_name-3">Бренд 3</label>
+                            </dd>
+                        </dl>    <!-- eof 'Definition List tyre'    -->
+
+                        <dl>
+                            <dt>ДИСКИ</dt>
+                            <dd>
+                                <input type="checkbox" name="disk-brand_name" value="disk-brand-01" id="disk-brand_name-1">
+                                <label for="disk-brand_name-1">Бренд 1</label>
+                            </dd>
+                            <dd>
+                                <input type="checkbox" name="disk-brand_name" value="disk-brand-02" id="disk-brand_name-2">
+                                <label for="disk-brand_name-2">Бренд 2</label>
+                            </dd>
+                            <dd>
+                                <input type="checkbox" name="disk-brand_name" value="disk-brand-03" id="disk-brand_name-3">
+                                <label for="disk-brand_name-3">Бренд 3</label>
+                            </dd>
+                        </dl>    <!-- eof 'Definition List DISKS'    -->
+
+                        <input type="submit" value="ВЫБРАТЬ">
+                    </fieldset>
+                </form>    <!-- eo 'Brand lists' -->
+            </aside>    <!-- eo 'Brand lists' -->
+        </div>    <!-- eo Center space -->
+
+        <footer class="footer_space">
+            <div class="brand_ribbon">
+                <ul>
+                    <li>
+                        <a href="https://www.toyotires.com/" title="Toyo Tires"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.bridgestone.com/" title="Bridgstone"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.continentaltire.com/" title="Continental Tire"></a>
+                    </li>
+                    <li>
+                        <a href="http://coopertire.com/" title="Cooper Tires"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.avonmoto.com/" title="AVON Tires"></a>
+                    </li>
+                    <li>
+                        <a href="http://repairautomissoula.com/tire-sales-service/" title="Roemer's Tires Factory"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.pirelli.com/global" title="Pirelli"></a>
+                    </li>
+                    <li>
+                        <A href="http://www.dunloptires.com/" title="Dunlop"></a>
+                    </li>
+                </ul>
+            </div>    <!-- eo 'Brand Ribbon' -->
+
+            <div class="core_footer">
+                <ul class="company_infolist clearfix">
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>    <!-- eo Company Info-List -->
+
+                <p class="info_webdev">Создание сайта &copy; <a href="#">Global Vision</a></p>
+            </div>    <!-- eo Core-footer -->
+        </footer>    <!-- eo 'Footer space' (Brand Ribbon + Company Information) -->
+    </div> <!-- eo 'wrapper_core' -->
+</body>
